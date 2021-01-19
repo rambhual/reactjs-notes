@@ -1,0 +1,18 @@
+How to upload files in Reactjs with strapi as backend
+
+# Create a useState with name of file and pass value as null
+
+
+const fd = new FormData();
+fd.append('data',JSON.stringify({name}))
+fd.append("files.image",file)
+
+const response = await fetch(url,{
+method:"POST",
+body:fd
+})
+
+// check returned data in console
+
+const data = response.json();
+console.log("data",data)
